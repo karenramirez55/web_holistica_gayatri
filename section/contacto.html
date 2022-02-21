@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../img/lunafavicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../estilos/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,200;0,400;1,100;1,300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,200;0,400;1,100;1,300&family=Lobster&display=swap" rel="stylesheet">
+    <title>Gayatri Web</title>
+</head>
+<body id="gridFormulario">
+    <header>
+        <img class="logo" src="../img/logogayatri.png" alt="">
+    </header>
+    <nav>
+        <!-- ENLACES RELATIVOS -->
+               <a href="../index.html">Home</a>
+            
+                 <a href="./mantras.html">Mantras</a>
+            
+                <a href="./meditaciones.html">Meditaciones</a> 
+            
+               <a href="./libros.html">Libros</a> 
+           
+                <a href="./contacto.html">Contacto</a>
+    </nav>
+
+    
+
+        <form class="formularioPadre">
+            <div class="datos">
+                <h1 class="tituloFormulario">Formulario de contacto:</h1>
+                <div class="datos__personales">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" name="nombre">
+                </div>
+                <div class="datos__personales">
+                    <label for="apellido">Apellido:</label>
+                    <input type="text" name="apellido">
+                </div>
+                <div class="datos__personales">
+                    <label for="email">E-mail:</label>
+                    <input type="email" name="email">
+                </div>
+                <h3 class="datos__personales">Sexo:</h3>
+                <span>Hombre</span>
+                <input type="radio" name="sexo" value="Hombre">
+                <span>Mujer</span>
+                <input type="radio" name="sexo" value="Mujer">
+                <span">Otro</span>
+                <input type="radio" name="sexo" value="Otro">
+                <h3 class="datosCondiciones">Aceptar terminos y condiciones:</h3>
+                <span class="datosAcepto">Acepto</span>
+                <input type="checkbox" name="acepta" value="1">
+                <div>
+                <input type="submit" value="Enviar formulario">
+                <input type="reset" value="Borrar datos">
+                </div>
+                
+            </div>
+          
+        </form>
+    
+<footer>
+    <h3 >Suscribite a nuestro newsletter:</h3>
+    <label for="nombre">Nombre:</label>
+    <input type="text" name="nombre">
+    <label for="E-mail">E-mail:</label>
+    <input  type="E-mail" name="E-mail"> <br>
+    <input type="submit" value="Suscribete ya">
+    <input type="reset" value="Borrardatos">
+    © 2022 Karen Ramirez, todos los derechos reservados.
+</footer>
+    
+</body>
+</html>
