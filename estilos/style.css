@@ -42,7 +42,7 @@ body{
      flex-direction: column;
  }
 
- li{
+ .listaMenu{
      padding: 13%;
  }
 
@@ -53,10 +53,37 @@ body{
  }
 
 .imagenIndex{
-     width: 155%;
+     width: 100%;
+     height: 100%;
+     
+ }
+
+ .articleIndex{
+     display: flex;
+     animation: cambio 20s infinite alternate linear;
+     width: 100%;
      height: 100%;
  }
- 
+.articleIndex ul{
+    position: relative;
+}
+
+
+
+ @keyframes cambio{
+     0%{margin-left: 0;}
+     20%{margin-left: 0;}
+
+     25%{margin-left: -100%;}
+     45%{margin-left: -100%;}
+
+     50%{margin-left: -200%;}
+     70%{margin-left: -200%;}
+
+     75%{margin-left: -300%;}
+     100%{margin-left: -300%;}
+ }
+
 aside{
     grid-area: brazo;
     background-color: rgb(193, 238, 240);
@@ -119,7 +146,7 @@ nav a:hover{
 .mantrasContenedor{
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    grid-template-rows: repeat(2,1fr); /* MODIFIQUE PORQUE DECIA 3 Y HAY 2*/
+    grid-template-rows: repeat(2,1fr);
     grid-area: main;
     background-color: rgb(233, 194, 215);
 }
@@ -131,9 +158,9 @@ div{
 }
 
 .imagenesMantras{
-    width: 90%; /*MODIFIQUE EN PORCENTAJE PARA QUE SE AJUSTE MEJOR */ 
-    height: 50%; /*MODIFIQUE EN PORCENTAJE PARA QUE SE AJUSTE MEJOR */ 
-    margin-left: 05%; /*MODIFIQUE EL 9% */
+    width: 90%;  
+    height: 50%;
+    margin-left: 05%;
     margin-top: 05%;
     border-radius: 20px;
 }
@@ -200,6 +227,12 @@ div{
         flex-direction: row;
     }
 
+    li{
+        display: inline;
+        padding-left: 3px;
+        padding-right: 3px;
+    }
+ 
     .logo{
         margin-left: 0%;
        width: auto;
@@ -317,8 +350,8 @@ div{
     }
 
     .imagenesMantras{
-        width: 90%; /* MODIFIQUE ESTO PARA AJUSTAR LAS FOTOS*/
-        height: 50%; /* MODIFIQUE ESTO PARA AJUSTAR LAS FOTOS*/
+        width: 90%;
+        height: 50%;
         margin-left: 5%;
         margin-top: 05%;
         border-radius: 20px;
@@ -327,7 +360,7 @@ div{
     .mantrasContenedor{
         grid-template-columns: repeat(2,1fr);
         grid-template-rows: repeat(3,1fr);
-        margin-bottom: 10px; /* AGREGUE PARA QUE SE DESPEGUE DEL FOOTER */
+        margin-bottom: 10px;
     }
 
     .contenedorHijoMantras{
@@ -522,6 +555,7 @@ div{
 #significadoMeditacion{
     display: grid;
     grid-area: principal;
+    background-image: linear-gradient(to top, rgb(231, 217, 136),white );
 
 }
 #frasesMeditacion{
@@ -551,7 +585,21 @@ div{
     padding: 10px;
     margin: 10px;
     border-style: outset;
+
 }
+.fraseUnoMeditacion:hover{
+    transform: scale(1.3);
+    transition: all 3s;
+}
+.fraseDosMeditacion:hover{
+    transform: scale(1.3);
+    transition: all 3s;
+}
+.fraseTresMeditacion:hover{
+    transform: scale(1.3);
+    transition: all 3s;
+}
+
 .fraseDosMeditacion{
     background-color: rgb(206, 207, 204);
     border-radius: 25px;
@@ -594,6 +642,7 @@ div{
     background-color: black;
     
 }
+
 .meditacionLetrasNav{
     color: rgba(226, 205, 83, 0.952);
 }
