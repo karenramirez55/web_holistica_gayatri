@@ -40,7 +40,11 @@ body{
      grid-area: menu;
      display: flex;
      flex-direction: column;
- } 
+ }
+
+ li{
+     padding: 13%;
+ }
 
 .logo{
     width: auto;
