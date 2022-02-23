@@ -12,7 +12,7 @@ body{
 #gridAreas{
     display: grid;
     grid-template-columns: 10% auto auto 18%;
-    grid-template-rows: 150px 2fr 2fr 150px ;
+    grid-template-rows: 150px 2fr 2fr 100px ;
     grid-template-areas: "menu head head head"
                         "menu main main brazo"
                         "menu servicios servicios brazo"
@@ -32,7 +32,6 @@ body{
  footer{
      grid-area: foot;
      background-color: rgb(206, 207, 202);
-
  }
 
  nav{
@@ -41,8 +40,10 @@ body{
      display: flex;
      flex-direction: column;
  }
-
- .listaMenu{
+ul{
+    list-style: none;
+}
+.listaMenu{
      padding: 13%;
  }
 
@@ -53,41 +54,14 @@ body{
  }
 
 .imagenIndex{
-     width: 100%;
+     width: 105%;
      height: 100%;
      
- }
-
- .articleIndex{
-     display: flex;
-     animation: cambio 20s infinite alternate linear;
-     width: 100%;
-     height: 100%;
- }
-.articleIndex ul{
-    position: relative;
-}
-
-
-
- @keyframes cambio{
-     0%{margin-left: 0;}
-     20%{margin-left: 0;}
-
-     25%{margin-left: -100%;}
-     45%{margin-left: -100%;}
-
-     50%{margin-left: -200%;}
-     70%{margin-left: -200%;}
-
-     75%{margin-left: -300%;}
-     100%{margin-left: -300%;}
  }
 
 aside{
     grid-area: brazo;
     background-color: rgb(193, 238, 240);
-    
 }
 .services{
     grid-area: servicios;
@@ -151,7 +125,7 @@ nav a:hover{
     background-color: rgb(233, 194, 215);
 }
 
-div{
+.contenedorHijoMantras{
     background-color: rgb(233, 169, 202);
     margin: 20px;
     border-radius: 20px;
@@ -212,6 +186,7 @@ div{
     #gridAreas{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr ;
         grid-template-areas: "head head head"
                             "menu menu menu"
                             "main main brazo"
@@ -225,9 +200,12 @@ div{
         grid-area: menu;
         display: flex;
         flex-direction: row;
+        height: 10%;
+        width: 100%;
     }
 
-    li{
+
+    .listaMenu{
         display: inline;
         padding-left: 3px;
         padding-right: 3px;
@@ -419,125 +397,104 @@ div{
     }
 
     .parrafoMantras{
-
         margin-bottom: 6%;
-        
     }
 }
-
 
 #gridLibros{
     display: grid;
-    grid-template-columns: 12% 2fr 2fr 2fr;
-    grid-template-rows: 150px 40vh 50vh 2fr;
+    grid-template-columns: 12% 1fr 1fr 1fr;
+    grid-template-rows: 30vh 70vh 60vh 10vh;
     grid-template-areas: "menu head  head  head"
-                         "menu imag1 imag2 imag4"
-                         "menu imag1 imag3 imag4"
-                         "menu imag5 imag7 imag6"
+                         "menu galeria galeria galeria"
+                         "menu galeria galeria galeria"
                          "foot foot  foot  foot";
     grid-column-gap: 3px;
     grid-row-gap: 3px;
-    background-color:white;
+
 }
 
-
-#libroDetox{
+.galeriaLibros_contenedor{
     display: grid;
-    grid-area: imag1;
-    padding: 4%;
+    grid-area: galeria;
+    grid-template-columns: 42vh 42vh 42vh 42vh;
+    grid-template-rows: 60vh 60vh;
+    grid-gap: 10px;
+    padding: 5px;
 }
 
-.fotoDetox{
-    
-    width: 50vh;
-    height: 75vh;
-}
-.fotoDetox:hover{
-    animation: animacion 5s;
-}
-
-#libroArcangeles{
-    display: grid;
-    grid-area: imag2;
-}
-
-.fotoArcangeles{
-    width: 35vh;
-    height: 40vh;
-}
-.fotoArcangeles:hover{
-    animation: animacion 5s;
-}
-
-#libroAlquimista{
-    display: grid;
-    grid-area: imag3;
-}
-
-.fotoAlquimista{
+.galeriaLibros__item{
+    margin: 0;
+    padding: 15px;
     width: 40vh;
-    height: 50vh;
-}
-.fotoAlquimista:hover{
-    animation: animacion 5s;
+    height: 60vh;
+    background-color: rgb(234, 232, 235);
 }
 
-#libroSincrodestino{
-    display: grid;
-    grid-area: imag4;
+.galeriaLibros__img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-.fotoSincrodestino{
-    width: 60vh;
-    height: 85vh;
-}
-.fotoSincrodestino:hover{
-    animation: animacion 5s;
-}
-
-#libroTich{
-    display: grid;
-    grid-area: imag5;
-}
-.fotoTichLibro:hover{
-    animation: animacion 5s;
-}
-
-#libroYogananda{
-    display: grid;
-    grid-area: imag6;
-}
-
-.fotoYogananda{
-    width: 60vh;
-    height: 85vh;
-}
-.fotoYogananda:hover{
-    animation: animacion 5s;
-}
-#libroMeditationChopra{
-    display: grid;
-    grid-area: imag7;
-}
-
-.fotoMeditationChopra{
-    width: 55vh;
-    height: 70vh;
-}
-.fotoMeditationChopra:hover{
-    animation: animacion 5s;
-}
-
-@keyframes animacion{
-   
-    25%{
-        border-radius: 50%;
+/*TABLET LIBROS*/
+@media screen and (max-width: 920px) {
+    #gridLibros{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 20vh 10vh;
+        grid-template-areas: "head head "
+                            "menu  menu"
+                            "galeria galeria"
+                            "foot  foot"
+        ;
+        margin-top: 5%;
     }
-    90%{
-        height: 400px;
+    .galeriaLibros_contenedor{
+        grid-template-columns: 42vh 42vh;
+
+    }
+    .logo{
+        margin-left: 0%;
+       width: auto;
+       height: auto;
+    }
+
+    nav{
+        display: flex;
+        flex-direction: row;
     }
 }
 
+/*MOBILE LIBRO*/
+
+@media screen and (max-width: 500px) {
+    #gridLibros{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "head"
+        "menu"
+        "galeria"
+        "foot "
+        ;
+    }
+    .galeriaLibros_contenedor{
+        grid-template-columns: 50vh;
+
+    }
+    .logo{
+        margin-left: 0%;
+       width: auto;
+       height: auto;
+    }
+
+    nav{
+        display: flex;
+        flex-direction: row;
+    }
+ 
+}
 
 #gridMeditaciones{
     display: grid;
@@ -546,7 +503,7 @@ div{
     grid-template-areas: "menu head      head      head"
                          "menu principal principal link"
                          "menu frase     columna   columna"
-                         "foot foot      foot      foot";
+                         "menu foot      foot      foot";
     grid-column-gap: 5px;
     grid-row-gap: 5px;
      
@@ -587,18 +544,6 @@ div{
     border-style: outset;
 
 }
-.fraseUnoMeditacion:hover{
-    transform: scale(1.3);
-    transition: all 3s;
-}
-.fraseDosMeditacion:hover{
-    transform: scale(1.3);
-    transition: all 3s;
-}
-.fraseTresMeditacion:hover{
-    transform: scale(1.3);
-    transition: all 3s;
-}
 
 .fraseDosMeditacion{
     background-color: rgb(206, 207, 204);
@@ -616,6 +561,24 @@ div{
     border-style: outset;
     
 }
+
+.fraseUnoMeditacion:hover{
+    transform: scale(1.3);
+    transition: all 3s;
+}
+.fraseDosMeditacion:hover{
+    transform: scale(1.3);
+    transition: all 3s;
+}
+.fraseTresMeditacion:hover{
+    transform: scale(1.3);
+    transition: all 3s;
+}
+
+.autoresFrases{
+    padding-left: 60%;
+}
+
 .significadoMeditacionParrafo{
     padding: 40px;
     font-size: 20px;
@@ -640,7 +603,7 @@ div{
 }
 .meditacionLinkNav{
     background-color: black;
-    
+    height: 100%;
 }
 
 .meditacionLetrasNav{
@@ -649,7 +612,6 @@ div{
 
 .tituloAsideMeditacion{
     color: white;
-    
 }
 
 .linkAsideMeditacion{
@@ -658,12 +620,13 @@ div{
     font-size: 15px;
 }
 
-.articleAsideMeditacion{
+.divAsideMeditacion{
     padding: 3%;
     border-style: double;
     border-color: white;
     border-radius: 5%;
 }
+
 /*TABLET MEDITACIONES*/
 @media screen and (max-width: 920px) {
     #gridMeditaciones{
@@ -690,16 +653,26 @@ div{
         flex-direction: row;
         height: 85%;
         width: 80%;
-
     }
 
     #linkMeditacion{
         height: 20vh;
     }
 
-    .fotoMeditacion{ /* EN responsive las imagenes no se achican*/
+    .fotoMeditacion{
         height: 20vh;
         width: 20vh;
+    }
+
+    .fraseUnoMeditacion:hover{
+        transform: scale(1.1);
+    }
+
+    .fraseDosMeditacion:hover{
+        transform: scale(1.1);
+    }
+    .fraseTresMeditacion:hover{
+        transform: scale(1.1);
     }
 }
 /*MOBILE MEDITACIONES*/
@@ -737,128 +710,57 @@ div{
     }
 }
 
-/*TABLET LIBROS*/
-@media screen and (max-width: 920px) {
-    #gridLibros{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 20vh 10vh;
-        grid-template-areas: "head head "
-                            "menu  menu"
-                            "imag1 imag1"
-                            "imag2 imag2"
-                            "imag3 imag3"
-                            "imag4 imag4"
-                            "imag5 imag5"
-                            "imag6 imag6"
-                            "imag7 imag7"
-                            "foot  foot"
-        ;
-        margin-top: 5%;
-    }
-    
-    .logo{
-        margin-left: 0%;
-       width: auto;
-       height: auto;
-    }
-
-    nav{
-        display: flex;
-        flex-direction: row;
-        height: 20vh;
-    }
-    .fotoDetox{
-        width: 30vh;
-        height: 45vh; 
-    }
-}
-
-/*MOBILE LIBRO*/
-
-@media screen and (max-width: 500px) {
-    #gridLibros{
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-areas:
-        "head"
-        "menu"
-        "imag1"
-        "imag2"
-        "imag3"
-        "imag4"
-        "imag5"
-        "imag6"
-        "imag7"
-        "foot "
-        ;
-    }
-    
-    .logo{
-        margin-left: 0%;
-       width: auto;
-       height: auto;
-    }
-
-    nav{
-        display: flex;
-        flex-direction: row;
-    }
-    a{
-        padding: 1%;
-    }
- 
-    .fotoSincrodestino{
-        width: 35vh;
-        height: 40vh;
-    }
-    .fotoYogananda{
-        width: 35vh;
-        height: 40vh; 
-    }
-    .fotoMeditationChopra{
-        width: 35vh;
-        height: 40vh;
-    }
-}
-
 #gridFormulario{
     display: grid;
-    grid-template-columns: 10% auto;
-    grid-template-rows: 150px 100% ;
-    grid-template-areas: "menu head"
-                         "menu main"
-                        "menu foot "
+    grid-template-columns: 12% 1fr 1fr;
+    grid-template-rows: 30vh 70vh 10vh;
+    grid-template-areas: "menu head  head  head"
+                         "menu main  main  main"
+                         "foot foot  foot  foot";
                         
     ;
     grid-column-gap: 5px;
     grid-row-gap: 5px;
 }
-
 .formularioPadre{
     display: grid;
     grid-area: main;
-    height: 70vh;
-    width: 70vh;
-    margin-left: 50vh;
     display: flex;
     justify-content: center;
-    text-align: center;
+    margin-right: 50%;
+    margin-top: 1%;
+    border-style:groove;
+}
+.datos__personales{
+    padding: 2%;
+    font-size: 25px;
 }
 .datosCondiciones{
-    margin-top: 10%;
+    margin-top: 5%;
 }
 .datosAcepto{
     margin-top: 10%;
 }
 .tituloFormulario{
-    font-size: 25px;
+    font-size: 30px;
+    padding-bottom: 5%;
+    padding-top: 5%;
+    color: black;
 }
-
 .datos{
-    padding: 10%;
+    margin-left: 5%;
+    width: 70vh;
 }
-
+.inputContacto{
+    width: 40vh;
+    height: 3vh;
+}
+.botonesFormulario{
+    width: 20vh;
+    height: 4vh;
+    font-size: 15px;
+    margin-top: 10px;
+}
 /*TABLET FORMULARIO*/
 @media screen and (max-width: 920px) {
     #gridFormulario{
@@ -888,6 +790,11 @@ div{
 
     .formularioPadre{
         margin-left: 5%;
+    }
+
+    .inputContacto{
+        width: 20vh;
+        height: 3vh;
     }
 }
 

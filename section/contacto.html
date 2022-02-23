@@ -17,59 +17,64 @@
     <nav>
         <!-- ENLACES RELATIVOS -->
         <ul>
-            <li>
+            <li class="listaMenu">
                 <a href="../index.html">Home</a>
             </li>
-            <li>
+            <li class="listaMenu">
                 <a href="./mantras.html">Mantras</a>
             </li>
-            <li>
+            <li class="listaMenu">
                 <a href="./meditaciones.html">Meditaciones</a>
             </li>
-            <li>
+            <li class="listaMenu">
                 <a href="./libros.html">Libros</a>
             </li>
-            <li>
+            <li class="listaMenu">
                 <a href="./contacto.html">Contacto</a>
             </li>
         </ul>
          
     </nav>
+       
+            <form class="formularioPadre">
+                <div class="datos">
 
-        <form class="formularioPadre">
-            <div class="datos">
-                <h1 class="tituloFormulario">Formulario de contacto:</h1>
-                <div class="datos__personales">
-                    <label for="nombre">Nombre:</label>
-                    <input type="text" name="nombre">
+                    <h1 class="tituloFormulario">Contacto</h1>
+
+                    <div class="datos__personales">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" name="nombre" class="inputContacto">
+                    </div>
+
+                    <div class="datos__personales">
+                        <label for="apellido">Apellido:</label>
+                        <input type="text" name="apellido" class="inputContacto">
+                    </div>
+
+                    <div class="datos__personales">
+                        <label for="email">E-mail:</label>
+                        <input type="email" name="email" class="inputContacto">
+                    </div>
+
+                    <h3 class="datos__personales">Sexo:</h3>
+                    <span>Hombre</span>
+                    <input type="radio" name="sexo" value="Hombre">
+                    <span>Mujer</span>
+                    <input type="radio" name="sexo" value="Mujer">
+                    <span">Otro</span>
+                    <input type="radio" name="sexo" value="Otro">
+
+                    <h3 class="datosCondiciones">Aceptar terminos y condiciones:</h3>
+                    <span class="datosAcepto">Acepto</span>
+                    <input type="checkbox" name="acepta" value="1">
+                    <div>
+                    <input type="submit" value="Enviar formulario" class="botonesFormulario">
+                    <input type="reset" value="Borrar datos" class="botonesFormulario">
+                    </div>
+                    
                 </div>
-                <div class="datos__personales">
-                    <label for="apellido">Apellido:</label>
-                    <input type="text" name="apellido">
-                </div>
-                <div class="datos__personales">
-                    <label for="email">E-mail:</label>
-                    <input type="email" name="email">
-                </div>
-                <h3 class="datos__personales">Sexo:</h3>
-                <span>Hombre</span>
-                <input type="radio" name="sexo" value="Hombre">
-                <span>Mujer</span>
-                <input type="radio" name="sexo" value="Mujer">
-                <span">Otro</span>
-                <input type="radio" name="sexo" value="Otro">
-                <h3 class="datosCondiciones">Aceptar terminos y condiciones:</h3>
-                <span class="datosAcepto">Acepto</span>
-                <input type="checkbox" name="acepta" value="1">
-                <div>
-                <input type="submit" value="Enviar formulario">
-                <input type="reset" value="Borrar datos">
-                </div>
-                
-            </div>
-          
-        </form>
-    
+            </form>
+        
 <footer>
     <h3 >Suscribite a nuestro newsletter:</h3>
     <label for="nombre">Nombre:</label>
