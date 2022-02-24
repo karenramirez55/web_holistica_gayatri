@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../img/lunafavicon.png" type="image/x-icon">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
     <link rel="stylesheet" href="../estilos/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,200;0,400;1,100;1,300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,200;0,400;1,100;1,300&family=Lobster&display=swap" rel="stylesheet">
@@ -16,75 +19,68 @@
     </header>
     <nav>
         <!-- ENLACES RELATIVOS -->
-        <ul>
-            <li class="listaMenu">
-                <a href="../index.html">Home</a>
+        <ul class="nav flex-column">
+            <li class="nav-item">
+                <a class="nav-link text-secondary" aria-current="page" href="../index.html">Home</a>
             </li>
-            <li class="listaMenu">
-                <a href="./mantras.html">Mantras</a>
+            <li class="nav-item">
+                <a class="nav-link text-secondary" href="mantras.html">Mantras</a>
             </li>
-            <li class="listaMenu">
-                <a href="./meditaciones.html">Meditaciones</a>
+            <li class="nav-item">
+                <a class="nav-link text-secondary" href="meditaciones.html">Meditaciones</a>
             </li>
-            <li class="listaMenu">
-                <a href="./libros.html">Libros</a>
+            <li class="nav-item">
+                <a class="nav-link text-secondary" href="libros.html">Libros</a>
             </li>
-            <li class="listaMenu">
-                <a href="./contacto.html">Contacto</a>
+            <li class="nav-item">
+                <a class="nav-link text-secondary" href="contacto.html">Contacto</a>
             </li>
-        </ul>
+          </ul>
          
     </nav>
        
             <form class="formularioPadre">
-                <div class="datos">
+                <div class="border border-4 container">
 
-                    <h1 class="tituloFormulario">Contacto</h1>
+                    <p class="fs-2">Formulario de contacto</p>
 
-                    <div class="datos__personales">
-                        <label for="nombre">Nombre:</label>
-                        <input type="text" name="nombre" class="inputContacto">
+                    <div class="row g-3">
+                        <div class="col">
+                          <input type="text" class="form-control" placeholder="Nombre" aria-label="First name">
+                        </div>
+                        <div class="col">
+                          <input type="text" class="form-control" placeholder="Apellido" aria-label="Last name">
+                        </div>
                     </div>
 
-                    <div class="datos__personales">
-                        <label for="apellido">Apellido:</label>
-                        <input type="text" name="apellido" class="inputContacto">
-                    </div>
+                      <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                      </div>
+                      <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label">Dejanos tu mensaje</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                      </div>
 
-                    <div class="datos__personales">
-                        <label for="email">E-mail:</label>
-                        <input type="email" name="email" class="inputContacto">
-                    </div>
+                      <div class="btn-group" role="group" aria-label="Basic outlined example">
+                        <button type="button" class="btn btn-outline-secondary">Enviar formulario</button>
+                        <button type="button" class="btn btn-outline-secondary">Borrar datos</button>
+                        
+                      </div>
 
-                    <h3 class="datos__personales">Sexo:</h3>
-                    <span>Hombre</span>
-                    <input type="radio" name="sexo" value="Hombre">
-                    <span>Mujer</span>
-                    <input type="radio" name="sexo" value="Mujer">
-                    <span">Otro</span>
-                    <input type="radio" name="sexo" value="Otro">
-
-                    <h3 class="datosCondiciones">Aceptar terminos y condiciones:</h3>
-                    <span class="datosAcepto">Acepto</span>
-                    <input type="checkbox" name="acepta" value="1">
-                    <div>
-                    <input type="submit" value="Enviar formulario" class="botonesFormulario">
-                    <input type="reset" value="Borrar datos" class="botonesFormulario">
-                    </div>
-                    
                 </div>
             </form>
         
-<footer>
-    <h3 >Suscribite a nuestro newsletter:</h3>
-    <label for="nombre">Nombre:</label>
-    <input type="text" name="nombre">
-    <label for="E-mail">E-mail:</label>
-    <input  type="E-mail" name="E-mail"> <br>
-    <input type="submit" value="Suscribete ya">
-    <input type="reset" value="Borrardatos">
-    © 2022 Karen Ramirez, todos los derechos reservados.
-</footer>
-    
+    <footer>
+        <h3 >Suscribite a nuestro newsletter:</h3>
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre">
+        <label for="E-mail">E-mail:</label>
+        <input  type="E-mail" name="E-mail"> <br>
+        <input type="submit" value="Suscribete ya">
+        <input type="reset" value="Borrardatos">
+        © 2022 Karen Ramirez, todos los derechos reservados.
+    </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>

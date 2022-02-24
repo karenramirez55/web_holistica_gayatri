@@ -21,6 +21,9 @@ body{
     grid-column-gap: 5px;
     grid-row-gap: 5px;
 }
+article{
+    grid-area: main; 
+}
 
  header{
      grid-area: head;
@@ -43,20 +46,11 @@ body{
 ul{
     list-style: none;
 }
-.listaMenu{
-     padding: 13%;
- }
 
 .logo{
     width: auto;
     height: auto;
     margin-left: 35%;
- }
-
-.imagenIndex{
-     width: 105%;
-     height: 100%;
-     
  }
 
 aside{
@@ -77,7 +71,7 @@ a{
     color: rgb(150, 101, 72);
 }
 
-nav a:hover{
+nav ul li a:hover{
     background-color: rgb(251, 253, 253);
     color: black;
     font-family: 'Lobster', cursive;
@@ -107,7 +101,7 @@ nav a:hover{
 #gridMantras{
     display: grid;
     grid-template-columns: 10% auto auto auto;
-    grid-template-rows: 150px 90% 90% 2fr ;
+    grid-template-rows: 150px 100vh 100vh 2fr ;
     grid-template-areas: "menu head head head"
                          "menu main main main"
                         "menu main main main"
@@ -196,17 +190,13 @@ nav a:hover{
     }
 
     nav{
-        background-color: white;
-        grid-area: menu;
         display: flex;
         flex-direction: row;
-        height: 10%;
-        width: 100%;
+        height: 90%;
+        width: 100%;;
     }
 
-
     .listaMenu{
-        display: inline;
         padding-left: 3px;
         padding-right: 3px;
     }
@@ -404,11 +394,11 @@ nav a:hover{
 #gridLibros{
     display: grid;
     grid-template-columns: 12% 1fr 1fr 1fr;
-    grid-template-rows: 30vh 70vh 60vh 10vh;
+    grid-template-rows: 30vh 70vh 60vh 20vh;
     grid-template-areas: "menu head  head  head"
                          "menu galeria galeria galeria"
                          "menu galeria galeria galeria"
-                         "foot foot  foot  foot";
+                         "menu foot  foot  foot";
     grid-column-gap: 3px;
     grid-row-gap: 3px;
 
@@ -499,7 +489,7 @@ nav a:hover{
 #gridMeditaciones{
     display: grid;
     grid-template-columns: 12% 2fr 2fr 2fr;
-    grid-template-rows: 150px 2fr 2fr 100px;
+    grid-template-rows: 150px 2fr 2fr 120px;
     grid-template-areas: "menu head      head      head"
                          "menu principal principal link"
                          "menu frase     columna   columna"
@@ -603,15 +593,16 @@ nav a:hover{
 }
 .meditacionLinkNav{
     background-color: black;
-    height: 100%;
+    height: 100%;;
 }
 
-.meditacionLetrasNav{
+/*.meditacionLetrasNav{
     color: rgba(226, 205, 83, 0.952);
-}
+}*/
 
 .tituloAsideMeditacion{
     color: white;
+    font-size: 20px;
 }
 
 .linkAsideMeditacion{
@@ -713,10 +704,10 @@ nav a:hover{
 #gridFormulario{
     display: grid;
     grid-template-columns: 12% 1fr 1fr;
-    grid-template-rows: 30vh 70vh 10vh;
+    grid-template-rows: 30vh 80vh 20vh;
     grid-template-areas: "menu head  head  head"
                          "menu main  main  main"
-                         "foot foot  foot  foot";
+                         "menu foot  foot  foot";
                         
     ;
     grid-column-gap: 5px;
@@ -727,40 +718,8 @@ nav a:hover{
     grid-area: main;
     display: flex;
     justify-content: center;
-    margin-right: 50%;
-    margin-top: 1%;
-    border-style:groove;
 }
-.datos__personales{
-    padding: 2%;
-    font-size: 25px;
-}
-.datosCondiciones{
-    margin-top: 5%;
-}
-.datosAcepto{
-    margin-top: 10%;
-}
-.tituloFormulario{
-    font-size: 30px;
-    padding-bottom: 5%;
-    padding-top: 5%;
-    color: black;
-}
-.datos{
-    margin-left: 5%;
-    width: 70vh;
-}
-.inputContacto{
-    width: 40vh;
-    height: 3vh;
-}
-.botonesFormulario{
-    width: 20vh;
-    height: 4vh;
-    font-size: 15px;
-    margin-top: 10px;
-}
+
 /*TABLET FORMULARIO*/
 @media screen and (max-width: 920px) {
     #gridFormulario{
@@ -825,3 +784,4 @@ nav a:hover{
         width: 80%;
     }
 }
+
