@@ -12,7 +12,7 @@ body{
 #gridAreas{
     display: grid;
     grid-template-columns: 10% auto auto 18%;
-    grid-template-rows: 150px 2fr 2fr 100px ;
+    grid-template-rows: 150px 2fr 2fr 20vh ;
     grid-template-areas: "menu head head head"
                         "menu main main brazo"
                         "menu servicios servicios brazo"
@@ -21,7 +21,14 @@ body{
     grid-column-gap: 5px;
     grid-row-gap: 5px;
 }
-article{
+.logoFooter{
+    width: 23vh;
+    height: 13vh;
+    border-radius: 15%;
+    margin-right: 3%;
+}
+
+.articleIndex{
     grid-area: main; 
 }
 
@@ -35,6 +42,7 @@ article{
  footer{
      grid-area: foot;
      background-color: rgb(206, 207, 202);
+     padding: 1%;
  }
 
  nav{
@@ -46,6 +54,9 @@ article{
 ul{
     list-style: none;
 }
+.listaMenu{
+     padding: 13%;
+ }
 
 .logo{
     width: auto;
@@ -53,7 +64,13 @@ ul{
     margin-left: 35%;
  }
 
-aside{
+.imagenIndex{
+     width: 105%;
+     height: 100%;
+     
+ }
+
+.asideHome{
     grid-area: brazo;
     background-color: rgb(193, 238, 240);
 }
@@ -71,37 +88,26 @@ a{
     color: rgb(150, 101, 72);
 }
 
-nav ul li a:hover{
+nav a:hover{
     background-color: rgb(251, 253, 253);
     color: black;
     font-family: 'Lobster', cursive;
 }
 
 .escucharMantra{
-    margin-left: 27%;
+    margin-left: 20%;
 }
 
 .videoGayatri{
     width: 35vh;
     padding: 5px;
     margin-left: 5%;
-    
-}
-.devaInfo{
-    width: 35vh;
-    padding: 5px;
-    margin-left: 10%;
-    margin-top: 5%;
-    color: rgba(15, 9, 6, 0.897);
-    font-family: 'Josefin Sans', sans-serif;
-    margin-top: 20%;
-    
 }
 
 #gridMantras{
     display: grid;
     grid-template-columns: 10% auto auto auto;
-    grid-template-rows: 150px 100vh 100vh 2fr ;
+    grid-template-rows: 150px 100vh 130vh 20% ;
     grid-template-areas: "menu head head head"
                          "menu main main main"
                         "menu main main main"
@@ -116,12 +122,13 @@ nav ul li a:hover{
     grid-template-columns: repeat(3,1fr);
     grid-template-rows: repeat(2,1fr);
     grid-area: main;
-    background-color: rgb(233, 194, 215);
+    background-image: url(../img/bosque.jpg);
 }
 
 .contenedorHijoMantras{
-    background-color: rgb(233, 169, 202);
+    background-color: rgb(180, 241, 183);
     margin: 20px;
+    margin-top: 40px;
     border-radius: 20px;
 }
 
@@ -140,10 +147,12 @@ nav ul li a:hover{
 
 .parrafoMantras{
     margin-left: 05%;
-    font-family: 'Josefin Sans', sans-serif;
+    /*font-family: 'Josefin Sans', sans-serif;*/
     margin-top: 3%;
     margin-right: 3%;
-    margin-bottom: 8%;  
+    margin-bottom: 8%; 
+    font-size: 18px;
+    
 }
 
 .textoMeditacionGlobal{
@@ -190,13 +199,17 @@ nav ul li a:hover{
     }
 
     nav{
+        background-color: white;
+        grid-area: menu;
         display: flex;
         flex-direction: row;
-        height: 90%;
-        width: 100%;;
+        height: 10%;
+        width: 100%;
     }
 
+
     .listaMenu{
+        display: inline;
         padding-left: 3px;
         padding-right: 3px;
     }
@@ -394,7 +407,7 @@ nav ul li a:hover{
 #gridLibros{
     display: grid;
     grid-template-columns: 12% 1fr 1fr 1fr;
-    grid-template-rows: 30vh 70vh 60vh 20vh;
+    grid-template-rows: 30vh 70vh 70vh 20vh;
     grid-template-areas: "menu head  head  head"
                          "menu galeria galeria galeria"
                          "menu galeria galeria galeria"
@@ -425,6 +438,10 @@ nav ul li a:hover{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: 0.3s ease all;
+}
+.galeriaLibros__img:hover{
+    transform: scale(1.07);
 }
 
 /*TABLET LIBROS*/
@@ -489,7 +506,7 @@ nav ul li a:hover{
 #gridMeditaciones{
     display: grid;
     grid-template-columns: 12% 2fr 2fr 2fr;
-    grid-template-rows: 150px 2fr 2fr 120px;
+    grid-template-rows: 150px 2fr 2fr 100px;
     grid-template-areas: "menu head      head      head"
                          "menu principal principal link"
                          "menu frase     columna   columna"
@@ -512,11 +529,11 @@ nav ul li a:hover{
 #linkMeditacion{
     display: grid;
     grid-area: link;
-    background-color: black;
-    padding: 10%;
+    padding: 6%;
     display: flex;
     justify-content: center;
     border-radius: 5%;
+
 }
 
 #columnaMeditacion{
@@ -593,12 +610,12 @@ nav ul li a:hover{
 }
 .meditacionLinkNav{
     background-color: black;
-    height: 100%;;
+    height: 100%;
 }
 
-/*.meditacionLetrasNav{
+.meditacionLetrasNav{
     color: rgba(226, 205, 83, 0.952);
-}*/
+}
 
 .tituloAsideMeditacion{
     color: white;
@@ -608,7 +625,10 @@ nav ul li a:hover{
 .linkAsideMeditacion{
     color: goldenrod;
     margin: 10%;
-    font-size: 15px;
+    font-size: 18px;
+}
+.linkAsideMeditacion:hover{
+    color: white;
 }
 
 .divAsideMeditacion{
@@ -616,6 +636,9 @@ nav ul li a:hover{
     border-style: double;
     border-color: white;
     border-radius: 5%;
+    background-color: black;
+    margin-bottom: 1%;
+    margin-top: 1%;
 }
 
 /*TABLET MEDITACIONES*/
@@ -647,7 +670,7 @@ nav ul li a:hover{
     }
 
     #linkMeditacion{
-        height: 20vh;
+        height: 55vh;
     }
 
     .fotoMeditacion{
@@ -698,16 +721,21 @@ nav ul li a:hover{
     }
     .meditacionLinkNav{
         height: 7vh;
+        width: 55vh;
+    }
+    #linkMeditacion{
+        height: 40vh;
+        width: 50vh;
     }
 }
 
 #gridFormulario{
     display: grid;
     grid-template-columns: 12% 1fr 1fr;
-    grid-template-rows: 30vh 80vh 20vh;
+    grid-template-rows: 30vh 70vh 20vh;
     grid-template-areas: "menu head  head  head"
                          "menu main  main  main"
-                         "menu foot  foot  foot";
+                         "foot foot  foot  foot";
                         
     ;
     grid-column-gap: 5px;
@@ -718,8 +746,40 @@ nav ul li a:hover{
     grid-area: main;
     display: flex;
     justify-content: center;
+    margin-right: 50%;
+    margin-top: 1%;
+    border-style:groove;
 }
-
+.datos__personales{
+    padding: 2%;
+    font-size: 25px;
+}
+.datosCondiciones{
+    margin-top: 5%;
+}
+.datosAcepto{
+    margin-top: 10%;
+}
+.tituloFormulario{
+    font-size: 30px;
+    padding-bottom: 5%;
+    padding-top: 5%;
+    color: black;
+}
+.datos{
+    margin-left: 5%;
+    width: 70vh;
+}
+.inputContacto{
+    width: 40vh;
+    height: 3vh;
+}
+.botonesFormulario{
+    width: 20vh;
+    height: 4vh;
+    font-size: 15px;
+    margin-top: 10px;
+}
 /*TABLET FORMULARIO*/
 @media screen and (max-width: 920px) {
     #gridFormulario{
@@ -784,4 +844,3 @@ nav ul li a:hover{
         width: 80%;
     }
 }
-
