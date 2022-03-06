@@ -1,3 +1,4 @@
+@import "header";
 
 *{
     padding: 0;
@@ -844,6 +845,7 @@ nav a:hover{
     nav{
         display: flex;
         flex-direction: row;
+        display: flex;
         height: 85%;
         width: 80%;
     }

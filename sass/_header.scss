@@ -1,0 +1,11 @@
+header{
+    grid-area: head;
+    background-color: white;
+    display: flex;
+    flex-direction: initial;
+    .logo{
+        width: auto;
+        height: auto;
+        margin-left: 35%;
+     }
+}
