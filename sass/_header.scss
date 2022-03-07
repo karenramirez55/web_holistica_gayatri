@@ -1,11 +1,11 @@
+
 header{
     grid-area: head;
-    background-color: white;
-    display: flex;
-    flex-direction: initial;
+    background-color: $backgroundHeader;
+    
     .logo{
-        width: auto;
-        height: auto;
+        width: 20%;
+        height:auto;
         margin-left: 35%;
      }
 }

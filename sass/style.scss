@@ -1,13 +1,24 @@
-@import "header";
-
+/*
 *{
     padding: 0;
     margin: 0;
 }
+*/
+
+@import "variables";
+@import "generales";
+@import "libros";
+@import "header";
+@import "footer"; 
+
+
+/*
 body{
     height: 100vh;
     width: 100%;
 }
+
+*/
 .navbar-dark .navbar-toggler{
     color: rgb(164, 165, 167);
     border-color: rgb(99, 97, 100);
@@ -37,12 +48,19 @@ body{
     grid-area: main; 
 }
 
- header{
+/* header{
      grid-area: head;
      background-color: white;
-     display: flex;
-     flex-direction: initial;
+     
  }
+ .logo{
+    width: auto;
+    height: auto;
+    margin-left: 35%;
+    display: flex;
+     flex-direction: initial;
+ } */  //ESTO ES LO QUE YA TENGO EN  CSS CON NESTING Y EN _HEADER
+
 
  footer{
      grid-area: foot;
@@ -63,11 +81,6 @@ ul{
      padding: 13%;
  }
 
-.logo{
-    width: auto;
-    height: auto;
-    margin-left: 35%;
- }
 
 .imagenIndex{
      width: 105%;
@@ -421,7 +434,7 @@ nav a:hover{
     grid-row-gap: 3px;
 
 }
-
+/*
 .galeriaLibros_contenedor{
     display: grid;
     grid-area: galeria;
@@ -447,7 +460,7 @@ nav a:hover{
 }
 .galeriaLibros__img:hover{
     transform: scale(1.07);
-}
+} */
 
 /*TABLET LIBROS*/
 @media screen and (max-width: 920px) {
