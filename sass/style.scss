@@ -148,6 +148,7 @@ nav a:hover{
     margin: 20px;
     margin-top: 40px;
     border-radius: 20px;
+    
 }
 
 .imagenesMantras{
@@ -348,25 +349,20 @@ nav a:hover{
         width: 80%;
     }
 
-    .imagenesMantras{
+    .imagenesMantras {
         width: 90%;
         height: 50%;
         margin-left: 5%;
         margin-top: 05%;
-        border-radius: 20px;
+        border-radius: 20px; }
+      .mantrasContenedor {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        margin-bottom: 10px; }
+      .contenedorHijoMantras {
+        height: 60vh; } 
     }
-
-    .mantrasContenedor{
-        grid-template-columns: repeat(2,1fr);
-        grid-template-rows: repeat(3,1fr);
-        margin-bottom: 10px;
-    }
-   
-
-    .contenedorHijoMantras{
-        height: 60vh;
-    }
-}      
+ 
 
     /* MANTRAS MOBILE */
 
@@ -398,31 +394,22 @@ nav a:hover{
         height: 20%;
     }
 
-    .imagenesMantras{
+    .imagenesMantras {
         width: 250px;
         height: 150px;
         margin-left: 19%;
         margin-top: 05%;
-        border-radius: 20px;
-    }
-
-    .mantrasContenedor{
-        grid-template-columns: repeat(1,1fr);
-        height: 310vh;
-    }
-
-    .contenedorHijoMantras{
-        height: 44vh;
-    }
-
-    .escucharMantra{
-        margin-left: 32%;
-    }
-
-    .parrafoMantras{
-        margin-bottom: 6%;
-    }
-}
+        border-radius: 20px; }
+      .mantrasContenedor {
+        grid-template-columns: repeat(1, 1fr);
+        height: 250vh; }
+      .contenedorHijoMantras {
+        height: 37vh; }
+      .escucharMantra {
+        margin-left: 32%; }
+      .parrafoMantras {
+        margin-bottom: 6%; }
+    
 
 #gridLibros{
     display: grid;
@@ -766,40 +753,10 @@ nav a:hover{
     grid-area: main;
     display: flex;
     justify-content: center;
-    margin-right: 50%;
-    margin-top: 1%;
-    border-style:groove;
+
+    width: 90vh;
 }
-.datos__personales{
-    padding: 2%;
-    font-size: 25px;
-}
-.datosCondiciones{
-    margin-top: 5%;
-}
-.datosAcepto{
-    margin-top: 10%;
-}
-.tituloFormulario{
-    font-size: 30px;
-    padding-bottom: 5%;
-    padding-top: 5%;
-    color: black;
-}
-.datos{
-    margin-left: 5%;
-    width: 70vh;
-}
-.inputContacto{
-    width: 40vh;
-    height: 3vh;
-}
-.botonesFormulario{
-    width: 20vh;
-    height: 4vh;
-    font-size: 15px;
-    margin-top: 10px;
-}
+
 /*TABLET FORMULARIO*/
 @media screen and (max-width: 920px) {
     #gridFormulario{
@@ -814,8 +771,7 @@ nav a:hover{
         margin-top: 5%;
     }
     
-    .logo{
-        margin-left: 0%;
+    .logo{ 
        width: auto;
        height: auto;
     }
@@ -827,14 +783,7 @@ nav a:hover{
         width: 80%;
     }
 
-    .formularioPadre{
-        margin-left: 5%;
-    }
-
-    .inputContacto{
-        width: 20vh;
-        height: 3vh;
-    }
+    
 }
 
 /*MOBILE FORMULARIO*/
@@ -864,4 +813,5 @@ nav a:hover{
         height: 85%;
         width: 80%;
     }
+}
 }
