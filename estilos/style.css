@@ -33,13 +33,14 @@ body {
       .galeriaLibros_contenedor .galeriaLibros__item .galeriaLibros__img:hover {
         transform: scale(1.07); }
 
+/*<img class="logo" src="../img/logogayatri.png" alt="">*/
 header {
   grid-area: head;
   background-color: white; }
   header .logo {
     width: 20%;
     height: auto;
-    margin-left: 35%; }
+    /* margin-left: 35%; */ }
 
 footer {
   grid-area: foot;
@@ -331,9 +332,9 @@ nav a:hover {
     border-radius: 20px; }
   .mantrasContenedor {
     grid-template-columns: repeat(1, 1fr);
-    height: 250vh; }
+    height: 310vh; }
   .contenedorHijoMantras {
-    height: 37vh; }
+    height: 44vh; }
   .escucharMantra {
     margin-left: 32%; }
   .parrafoMantras {

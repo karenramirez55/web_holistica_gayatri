@@ -361,6 +361,7 @@ nav a:hover{
         grid-template-rows: repeat(3,1fr);
         margin-bottom: 10px;
     }
+   
 
     .contenedorHijoMantras{
         height: 60vh;
@@ -384,6 +385,7 @@ nav a:hover{
         "foot";
     }
     
+    
     .logo{
         margin-left: 0%;
        width: auto;
@@ -406,11 +408,11 @@ nav a:hover{
 
     .mantrasContenedor{
         grid-template-columns: repeat(1,1fr);
-        height: 250vh;
+        height: 310vh;
     }
 
     .contenedorHijoMantras{
-        height: 37vh;
+        height: 44vh;
     }
 
     .escucharMantra{
