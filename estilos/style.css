@@ -10,10 +10,7 @@ body {
   display: grid;
   grid-template-columns: 12% 1fr 1fr 1fr;
   grid-template-rows: 30vh 70vh 70vh 20vh;
-  grid-template-areas: "menu head  head  head"
- "menu galeria galeria galeria"
- "menu galeria galeria galeria"
- "menu foot  foot  foot";
+  grid-template-areas: "menu head  head  head" "menu galeria galeria galeria" "menu galeria galeria galeria" "menu foot  foot  foot";
   grid-column-gap: 3px;
   grid-row-gap: 3px; }
   #gridLibros .galeriaLibros_contenedor {
@@ -126,10 +123,7 @@ footer .logoFooter {
   display: grid;
   grid-template-columns: 10% auto auto 18%;
   grid-template-rows: 150px 2fr 2fr 20vh;
-  grid-template-areas: "menu head head head"
- "menu main main brazo"
- "menu servicios servicios brazo"
- "menu foot foot foot";
+  grid-template-areas: "menu head head head" "menu main main brazo" "menu servicios servicios brazo" "menu foot foot foot";
   grid-column-gap: 5px;
   grid-row-gap: 5px; }
 
@@ -199,19 +193,11 @@ nav a:hover {
 .escucharMantra {
   margin-left: 20%; }
 
-.videoGayatri {
-  width: 35vh;
-  padding: 5px;
-  margin-left: 5%; }
-
 #gridMantras {
   display: grid;
   grid-template-columns: 10% auto auto auto;
   grid-template-rows: 150px 100vh 130vh 20%;
-  grid-template-areas: "menu head head head"
- "menu main main main"
- "menu main main main"
- "menu foot foot foot";
+  grid-template-areas: "menu head head head" "menu main main main" "menu main main main" "menu foot foot foot";
   grid-column-gap: 5px;
   grid-row-gap: 5px; }
 
@@ -277,11 +263,7 @@ nav a:hover {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    grid-template-areas: "head head head"
- "menu menu menu"
- "main main brazo"
- "servicios servicios brazo"
- "foot foot foot"; }
+    grid-template-areas: "head head head" "menu menu menu" "main main brazo" "servicios servicios brazo" "foot foot foot"; }
   nav {
     background-color: white;
     grid-area: menu;
@@ -317,12 +299,7 @@ nav a:hover {
 @media screen and (max-width: 500px) {
   #gridAreas {
     grid-template-columns: 1fr;
-    grid-template-areas: "head"
- "menu"
- "main"
- "servicios"
- "brazo"
- "foot"; }
+    grid-template-areas: "head" "menu" "main" "servicios" "brazo" "foot"; }
   nav {
     background-color: white;
     display: flex;
@@ -363,12 +340,7 @@ nav a:hover {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    grid-template-areas: "head head "
- "menu menu"
- "main main"
- "main main"
- "main main"
- "foot foot";
+    grid-template-areas: "head head " "menu menu" "main main" "main main" "main main" "foot foot";
     margin-top: 5%; }
   .logo {
     margin-left: 0%;
@@ -397,14 +369,7 @@ nav a:hover {
   #gridMantras {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-areas: "head"
- "menu"
- "main"
- "main"
- "main"
- "main"
- "main"
- "foot"; }
+    grid-template-areas: "head" "menu" "main" "main" "main" "main" "main" "foot"; }
   .logo {
     margin-left: 0%;
     width: auto;
@@ -432,10 +397,7 @@ nav a:hover {
     display: grid;
     grid-template-columns: 12% 1fr 1fr 1fr;
     grid-template-rows: 30vh 70vh 70vh 20vh;
-    grid-template-areas: "menu head  head  head"
- "menu galeria galeria galeria"
- "menu galeria galeria galeria"
- "menu foot  foot  foot";
+    grid-template-areas: "menu head  head  head" "menu galeria galeria galeria" "menu galeria galeria galeria" "menu foot  foot  foot";
     grid-column-gap: 3px;
     grid-row-gap: 3px; }
   .galeriaLibros_contenedor {
@@ -465,10 +427,7 @@ nav a:hover {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 20vh 10vh;
-    grid-template-areas: "head head "
- "menu  menu"
- "galeria galeria"
- "foot  foot";
+    grid-template-areas: "head head " "menu  menu" "galeria galeria" "foot  foot";
     margin-top: 5%; }
   .galeriaLibros_contenedor {
     grid-template-columns: 42vh 42vh; }
@@ -485,10 +444,7 @@ nav a:hover {
   #gridLibros {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-areas: "head"
- "menu"
- "galeria"
- "foot "; }
+    grid-template-areas: "head" "menu" "galeria" "foot "; }
   .galeriaLibros_contenedor {
     grid-template-columns: 50vh; }
   .logo {
@@ -503,10 +459,7 @@ nav a:hover {
   display: grid;
   grid-template-columns: 12% 2fr 2fr 2fr;
   grid-template-rows: 150px 2fr 2fr 100px;
-  grid-template-areas: "menu head      head      head"
- "menu principal principal link"
- "menu frase     columna   columna"
- "menu foot      foot      foot";
+  grid-template-areas: "menu head      head      head" "menu principal principal link" "menu frase     columna   columna" "menu foot      foot      foot";
   grid-column-gap: 5px;
   grid-row-gap: 5px; }
 
@@ -623,11 +576,7 @@ nav a:hover {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 2fr 2fr;
-    grid-template-areas: "head     head "
- "menu      menu"
- "principal link"
- "frase     columna"
- "foot      foot";
+    grid-template-areas: "head     head " "menu      menu" "principal link" "frase     columna" "foot      foot";
     margin-top: 5%; }
   .logo {
     margin-left: 0%;
@@ -655,15 +604,7 @@ nav a:hover {
   #gridMeditaciones {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-areas: "head"
- "menu"
- "principal"
- "columna"
- "columna"
- "frase"
- "frase"
- "link"
- "foot"; }
+    grid-template-areas: "head" "menu" "principal" "columna" "columna" "frase" "frase" "link" "foot"; }
   .logo {
     margin-left: 0%;
     width: auto;
@@ -684,9 +625,7 @@ nav a:hover {
   display: grid;
   grid-template-columns: 12% 1fr 1fr;
   grid-template-rows: 30vh 70vh 20vh;
-  grid-template-areas: "menu head  head  head"
- "menu main  main  main"
- "foot foot  foot  foot";
+  grid-template-areas: "menu head  head  head" "menu main  main  main" "foot foot  foot  foot";
   grid-column-gap: 5px;
   grid-row-gap: 5px; }
 
@@ -703,10 +642,7 @@ nav a:hover {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 2fr 2fr;
-    grid-template-areas: "head head "
- "menu menu"
- "main main"
- "foot foot";
+    grid-template-areas: "head head " "menu menu" "main main" "foot foot";
     margin-top: 5%; }
   .logo {
     width: auto;
@@ -723,10 +659,7 @@ nav a:hover {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 2fr;
-    grid-template-areas: "head"
- "menu"
- "main"
- "foot";
+    grid-template-areas: "head" "menu" "main" "foot";
     margin-top: 5%; }
   .logo {
     margin-left: 0%;
@@ -738,3 +671,23 @@ nav a:hover {
     display: flex;
     height: 85%;
     width: 80%; } }
+
+.galeriaLibros_contenedor {
+  height: 100%;
+  width: 100%; }
+
+.formularioTitulo, .indexTitulo {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: #0f1312; }
+
+.btn--twitter {
+  background-color: white;
+  border-radius: 13px; }
+
+.btn--facebook {
+  background-color: #a2b5f7;
+  border-radius: 13px; }
+
+.btn--instagram {
+  background-color: white;
+  border-radius: 13px; }

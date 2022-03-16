@@ -143,10 +143,6 @@
   .escucharMantra {
     margin-left: 20%; }
   
-  .videoGayatri {
-    width: 35vh;
-    padding: 5px;
-    margin-left: 5%; }
   
   #gridMantras {
     display: grid;
@@ -674,4 +670,39 @@
       display: flex;
       height: 85%;
       width: 80%; } }
+
+
+      @mixin size ($widht,$height){
+        height: $height;
+        width: $widht;
+      }
+      .galeriaLibros_contenedor{
+        @include size (100%,100%);
+      }
+
+
+
+      .formularioTitulo{
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color: rgb(15, 19, 18) ;
+
+      }
+      .indexTitulo{
+        @extend .formularioTitulo
+      }
+
+
+      $redes:(
+        twitter: white,
+        facebook: rgb(162, 181, 247),
+        instagram: white,
+      );
+
+      @each $red, $color,$boder in $redes {
+        .btn--#{$red}{
+          background-color: $color;
+          border-radius: 13px;
+        }
+      }
   
+      
