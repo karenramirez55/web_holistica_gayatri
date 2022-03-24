@@ -1,39 +1,92 @@
 #gridLibros {
-    display: grid;
-    grid-template-columns: 12% 1fr 1fr 1fr;
-    grid-template-rows: 30vh 70vh 70vh 20vh;
-    grid-template-areas: "menu head  head  head"
-                          "menu galeria galeria galeria"
-                          "menu galeria galeria galeria"
-                          "menu foot  foot  foot";
-    grid-column-gap: 3px;
-    grid-row-gap: 3px; 
-    .galeriaLibros_contenedor{
-        display: grid;
-        grid-area: galeria;
-        grid-template-columns: 42vh 42vh 42vh 42vh;
-        grid-template-rows: 60vh 60vh;
-        grid-gap: 10px;
-        padding: 5px;
-        .galeriaLibros__item{
-            margin: 0;
-            padding: 15px;
-            width: 40vh;
-            height: 60vh;
-            background-color: rgb(234, 232, 235);
-            .galeriaLibros__img{
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                transition: 0.3s ease all;
-                &:hover{
-                    transform: scale(1.07);
-                }
-            }
-        }
-    }
-    
+  display: grid;
+  grid-template-columns: 12% 1fr 1fr 1fr;
+  grid-template-rows: 30vh 70vh 70vh 20vh;
+  grid-template-areas: "menu head  head  head"
+                        "menu galeria galeria galeria"
+                        "menu galeria galeria galeria"
+                        "menu foot  foot  foot";
+  grid-column-gap: 3px;
+  grid-row-gap: 3px; 
+  .galeriaLibros_contenedor{
+      display: grid;
+      grid-area: galeria;
+      grid-template-columns: 42vh 42vh 42vh 42vh;
+      grid-template-rows: 60vh 60vh;
+      grid-gap: 10px;
+      padding: 5px;
+      .galeriaLibros__item{
+          margin: 0;
+          padding: 15px;
+          width: 40vh;
+          height: 60vh;
+          background-color: rgb(234, 232, 235);
+          .galeriaLibros__img{
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              transition: 0.3s ease all;
+              &:hover{
+                  transform: scale(1.07);
+              }
+          }
+      }
+  }
+  
+
+
+  @media screen and (max-width: 920px) {
+    #gridLibros {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas: "head head "
+                            "menu  menu"
+                            "galeria galeria"
+                            "foot  foot";
+      margin-top: 5%; }
+    .galeriaLibros_contenedor {
+      grid-template-columns: 42vh 42vh; }
+    .logo {
+      margin-left: 0%;
+      width: auto;
+      height: auto; }
+    nav {
+      display: flex;
+      flex-direction: row; } }
+  
+  
+    /*MOBILE LIBRO*/ 
+  
+  @media screen and (max-width: 500px) {
+    #gridLibros {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-areas: "head"
+                          "menu"
+                          "galeria"
+                          "foot "; }
+    .galeriaLibros_contenedor {
+      grid-template-columns: 50vh;
+      height: 500vh; }
+    .logo {
+      margin-left: 0%;
+      width: auto;
+      height: auto; }
+    nav {
+      display: flex;
+      flex-direction: row; } }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 }
-
-/*<img class="logo" src="../img/logogayatri.png" alt="">*/

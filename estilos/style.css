@@ -12,7 +12,8 @@ body {
   grid-template-rows: 30vh 70vh 70vh 20vh;
   grid-template-areas: "menu head  head  head" "menu galeria galeria galeria" "menu galeria galeria galeria" "menu foot  foot  foot";
   grid-column-gap: 3px;
-  grid-row-gap: 3px; }
+  grid-row-gap: 3px;
+  /*MOBILE LIBRO*/ }
   #gridLibros .galeriaLibros_contenedor {
     display: grid;
     grid-area: galeria;
@@ -33,8 +34,37 @@ body {
         transition: 0.3s ease all; }
         #gridLibros .galeriaLibros_contenedor .galeriaLibros__item .galeriaLibros__img:hover {
           transform: scale(1.07); }
+  @media screen and (max-width: 920px) {
+    #gridLibros #gridLibros {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas: "head head " "menu  menu" "galeria galeria" "foot  foot";
+      margin-top: 5%; }
+    #gridLibros .galeriaLibros_contenedor {
+      grid-template-columns: 42vh 42vh; }
+    #gridLibros .logo {
+      margin-left: 0%;
+      width: auto;
+      height: auto; }
+    #gridLibros nav {
+      display: flex;
+      flex-direction: row; } }
+  @media screen and (max-width: 500px) {
+    #gridLibros #gridLibros {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-areas: "head" "menu" "galeria" "foot "; }
+    #gridLibros .galeriaLibros_contenedor {
+      grid-template-columns: 50vh;
+      height: 500vh; }
+    #gridLibros .logo {
+      margin-left: 0%;
+      width: auto;
+      height: auto; }
+    #gridLibros nav {
+      display: flex;
+      flex-direction: row; } }
 
-/*<img class="logo" src="../img/logogayatri.png" alt="">*/
 header {
   grid-area: head;
   background-color: white; }
@@ -85,15 +115,13 @@ body {
 .galeriaLibros_contenedor .galeriaLibros__item .galeriaLibros__img:hover {
   transform: scale(1.07); }
 
-/*<img class="logo" src="../img/logogayatri.png" alt="">*/
 header {
   grid-area: head;
   background-color: white; }
 
 header .logo {
-  width: 20%;
-  height: auto;
-  /* margin-left: 35%; */ }
+  width: 30%;
+  height: auto; }
 
 footer {
   grid-area: foot;
@@ -111,7 +139,7 @@ footer .logoFooter {
   border-color: #636164;
   background-color: #bbc2c2; }
 
-/* DESKTOP */
+/* DESKTOP HOME*/
 #gridAreas {
   display: grid;
   grid-template-columns: 10% auto auto 18%;
@@ -135,7 +163,7 @@ footer {
   padding: 1%; }
 
 nav {
-  background-color: #180202;
+  background-color: #11110f;
   grid-area: menu;
   display: flex;
   flex-direction: column; }
@@ -171,8 +199,7 @@ a {
   text-decoration: none;
   margin-top: 15%;
   font-family: 'Lobster', cursive;
-  font-size: 20px;
-  color: #966548; }
+  font-size: 20px; }
 
 nav a:hover {
   background-color: #fbfdfd;
@@ -198,7 +225,7 @@ nav a:hover {
   background-image: url(../img/bosque.jpg); }
 
 .contenedorHijoMantras {
-  background-color: #b4f1b7;
+  background-color: #f7f8f7;
   margin: 20px;
   margin-top: 40px;
   border-radius: 20px; }
@@ -245,7 +272,7 @@ nav a:hover {
   margin-top: 3%;
   margin-bottom: 3%; }
 
-/* TABLET */
+/* TABLET HOME*/
 @media screen and (max-width: 920px) {
   #gridAreas {
     display: grid;
@@ -277,7 +304,7 @@ nav a:hover {
     font-family: 'Lobster', cursive;
     font-size: 21px; } }
 
-/* MOBILE */
+/* MOBILE HOME*/
 @media screen and (max-width: 500px) {
   #gridAreas {
     grid-template-columns: 1fr;
@@ -593,7 +620,7 @@ nav a:hover {
     height: 7vh;
     width: 55vh; }
   #linkMeditacion {
-    height: 40vh;
+    height: 65vh;
     width: 50vh; } }
 
 #gridFormulario {
@@ -660,9 +687,17 @@ nav a:hover {
   border-radius: 13px; }
 
 .btn--facebook {
-  background-color: #a2b5f7;
+  background-color: white;
   border-radius: 13px; }
 
 .btn--instagram {
   background-color: white;
   border-radius: 13px; }
+
+.parrafoLibros {
+  background-image: linear-gradient(to top, #6f62b4, #f7afe5);
+  width: 103%; }
+
+.imageRedesFooter {
+  width: 2em;
+  height: 2em; }
